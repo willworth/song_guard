@@ -5,6 +5,6 @@
 	</head>
 	<body>
 		<div id="header">
-			<h1>Song Guard</h1>
+			<h1>Song Guard</h1> 
 		</div>
 		<div id="main">
