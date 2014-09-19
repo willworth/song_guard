@@ -1,6 +1,7 @@
 /* Site Colors:
-	
-	
+	<div style="border:1px solid green;">Hello</div>
+	<span style="border:1px solid green;">Hello</span>
+	#EEE4B9;
 */
 
 
@@ -18,5 +19,7 @@ a { color: #4b0c0c;}
 #main { margin: 0px; padding: 0px; height: 600px; width: 100%; background: #EEE4B9; }
 #structure { height: 600px; width: 100%; }
 #footer { height: 2em; margin: 0px; padding: 1em; text-align: center; 
-	background: #1A446C;  color: #f5f5fd; }
+	background: black;  color: green; }
+#menu { font-weight: bold; text-align: center; font-size: 15px; line-height: 15px;}
+#intro {text-align: center; width: 600px;  }
 

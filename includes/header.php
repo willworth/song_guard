@@ -2,6 +2,7 @@
 	<head>
 		<title>Song Guard</title>
 		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="javascript/main.js"></script>
 	</head>
 	<body>
 		<div id="header">
