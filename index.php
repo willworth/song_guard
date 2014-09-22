@@ -1,21 +1,25 @@
 <?php require_once("includes/connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>		
-	<body>
-	<br />
-	<br />
-	<div id= "menu"> <a href="/login.php">Login</a>
-					 <a href="/songs.php">List all songs</a>
-					 <a href="artists.php">list all artists</a></div>
-<br /> <hr>
 
 
-<script type="text/javascript"> //this type declaration is only pre html5
+
+<!-- <script type="text/javascript"> //this type declaration is only pre html5
 alert("Song Guardian is in beta.");
-</script>
+</script>-->
 
 	<div id= "intro"
-	<p>Song Guard will be a mysql db powered site designed to store song lyrics
+	<p>Song Guard is a simple database driven web app to help organise your collection of songs.</p>
+	<p>You can organise by artist, song or instrument; by age of song, or how recently you've changed the file.</p>
+	<p>There is a separate section for your own material, and design decisions have been made to encourge your creativity.</p>
+	</div>
+	<?php
+	//<img src="images/difference.jpg" /> 
+	?>
+	</body>
+<!-- put js after everything else to ensure that else loads first. 
+
+Song Guard will be a mysql db powered site designed to store song lyrics
 	and chords in a simple, manageable way. 
 	Initially, it will simply store files,
 	but longer term it will sort and present by date added,
@@ -27,13 +31,16 @@ alert("Song Guardian is in beta.");
 	 system theory before I begin, or maybe I should just create a basic table
 	 to experiment with for the time being.  I don't want that to slow me down
 	 too much, and I have just been watching the PHP course, so it would make
-	 sense to use it before I forget it all...</p>
-	</div>
-	<?php
-	//<img src="images/difference.jpg" /> 
-	?>
-	</body>
-<!-- put js after everything else to ensure that else loads first. -->
+	 sense to use it before I forget it all...
+
+
+
+
+
+
+-->
 </html>
+
+<?php require("includes/footer.php"); ?>
 
 

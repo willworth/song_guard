@@ -15,11 +15,12 @@ a { color: #4b0c0c;}
 
 #header { height: 90px; margin: 0px; padding: 20px; text-align: center; 
 	background: black; color: #f5f5fd; }
-#header h1 { padding: 1em; margin: 0px; font-size: 45px;}
+#header h1 { padding: 1em; margin: 0px; font-size: 45px;font-family: serif;}
 #main { margin: 0px; padding: 0px; height: 600px; width: 100%; background: #EEE4B9; }
 #structure { height: 600px; width: 100%; }
 #footer { height: 2em; margin: 0px; padding: 1em; text-align: center; 
-	background: black;  color: green; }
+	background: black;  color: white; font-size: 18px;}
 #menu { font-weight: bold; text-align: center; font-size: 15px; line-height: 15px;}
-#intro {text-align: center; width: 600px;  }
+#intro {
+ }
 
