@@ -1,4 +1,5 @@
-<html>
+<?php require_once("includes/connection.php"); ?>
+<?php require_once("includes/functions.php"); ?><html>
 	<head>
 		<title>Song Guard</title>
 		<link href="stylesheets/public.css" media="all" rel="stylesheet" type="text/css" />

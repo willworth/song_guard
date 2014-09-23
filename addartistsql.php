@@ -1,6 +1,6 @@
-<?php require_once("connection.php"); ?>
-<?php require_once("functions.php"); ?>
-<?php include("header.php"); ?>		
+<?php require_once("includes/connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>		
 <?php
 
 $artist = $_POST['Artist'];
@@ -16,7 +16,7 @@ $query = "INSERT INTO artist (
 	if ($result) {
 		// Success!
 		
-    echo "<p>\"$artist added to database.</p>";
+    echo "<p>\"$artist\" added to database.</p>";
 	} else {
 		// Display error message.
 		echo "<p>Subject creation failed.</p>";
@@ -27,4 +27,4 @@ $query = "INSERT INTO artist (
 ?>
 <a href="index.php">Return to homepage</a>
 
-<?php require("footer.php"); ?>
+<?php require("includes/footer.php"); ?>

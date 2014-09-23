@@ -2,8 +2,20 @@
 ###############NOTES & TO DO#########################
 
 TO DO
+next step is finish add song sql query in addsongsql
+
 
 artist db table needs recreating with plural name
 
 add to sql needs to be put inside a function.
+
+
+if (isset($_POST['x']))
+{
+	$x = trim($_POST['x']);
+} else {
+	$x = '';
+}
+*/
+?>
 

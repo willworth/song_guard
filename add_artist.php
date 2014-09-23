@@ -15,7 +15,7 @@ Form data is passed to external php page add.php-->
 	</div>
 
 <!--  ####################BEGIN FORM#######################-->  
-	<form <!-- method="post" action="includes/addartistsql.php" --> 
+	<form <!-- method="post" action="addartistsql.php" --> 
 	<p>
 	Artist Name:
 	<input type="text" name="Artist" size="30">

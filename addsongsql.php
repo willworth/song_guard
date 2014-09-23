@@ -1,4 +1,11 @@
+<?php require_once("includes/connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>		
 <?php
+
+
+
+
 /*
 this file accepts the form data sent by new.php, and sends to SQL
 */
@@ -13,6 +20,25 @@ $guitar = $_POST['Guitar'];
 
 
 
+$query = "INSERT INTO songs (
+				title, year, content, song_key, song_notes, original, in_progress, piano
+			) VALUES (
+				'{$artist}' 
+			)";
+	$result = mysql_query($query,$connection);
+	if ($result) {
+		// Success!
+		
+    echo "<p>\"$artist\" added to database.</p>";
+	} else {
+		// Display error message.
+		echo "<p>Subject creation failed.</p>";
+		echo "<p>" . mysql_error() . "</p>";
+	}
+
+
+
+
 
 
 print "We have successfully received $title<br />"; 
@@ -24,17 +50,7 @@ print "We have successfully received $ready<br />";
 print "We have successfully received $guitar<br />";
 
 
-$sql = "INSERT INTO `song_guard`.`songs` (`id`, `title`, `artist_id`, `year`, `content`, `song_key`, `song_notes`, `original`, `in_progress`, `piano`) VALUES (NULL, \'$title\', NULL, \'w2014\', \'wcontent\', \'wc#\', \'wsongnotes\', \'1\', \'1\', \'piano\');";
-/*
 
 
-if (isset($_POST['x']))
-{
-	$x = trim($_POST['x']);
-} else {
-	$x = '';
-}
-*/
-?>
 
 
