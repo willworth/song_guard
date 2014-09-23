@@ -1,5 +1,5 @@
 <?php require_once("includes/connection.php"); ?>
-<?php require_once("includes/add.php"); ?>
+
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>		
 
@@ -30,7 +30,7 @@ Form data is passed to external php page add.php-->
 	
 	<p>
 	Original or cover:
-	<select name="original" size="1">
+	<select name="own" size="1">
 		<option value="Original">Original</option>
 		<option value="Cover">Cover</option>
 		</select>

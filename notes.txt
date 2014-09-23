@@ -1,10 +1,9 @@
-A google search shows no relevant results for song guard.  A good enough starting point for the project.
+################SONG GUARD###########################
+###############NOTES & TO DO#########################
 
-Song Guard will be a mysql db powered site designed to store song lyrics and chords in a simple, manageable way.  Initially, it will simply store files, but longer term it will sort and present by date added, age of song (if known), artist, title.  There will be additional sections for notes, and a series of check boxes (maybe?) to indicate if it's lyrics only.
+TO DO
 
+artist db table needs recreating with plural name
 
-Initial build can avoid a log in and just have a table adding data to the db.  This means i need to work on my tables.  Or does it?
+add to sql needs to be put inside a function.
 
-I want to build a prettier front end than that given by the php course, but i don't want to waste ages on the html course.  I reckon I'd rip through it now, though.  
-
-ALSO, GIT!
