@@ -12,16 +12,16 @@ Form data is passed to external php page add.php-->
 
 
 	<div id= "intro"
-	<p>This is where we add songs to the database.  Only the song title and chord/lyric fields are required.</p>
+	<p>This is where we add songs to the database. We will associate the songs with the artist later. Only the song title and chord/lyric fields are required.</p>
 	</div>
 
 <!--  ####################BEGIN FORM#######################-->  
-	<form <!-- method="post" action="includes/add.php" --> 
+	<form <!-- method="post" action="addsongsql.php" --> 
 	<p>
 	Song Title:
 	<input type="text" name="Title" size="30">
-	Artist:
-	<input type="text" name="Artist" size="30">
+<!-- 	Artist:
+	<input type="text" name="Artist" size="30"> -->
 	Year:
 	<input type="text" name="Year" size="4">
 	Musical Key:
@@ -30,9 +30,10 @@ Form data is passed to external php page add.php-->
 	
 	<p>
 	Original or cover:
-	<select name="own" size="1">
-		<option value="Original">Original</option>
-		<option value="Cover">Cover</option>
+	<select name="original" size="1">
+	    <option value="">-----</option>
+		<option value="original">Original</option>
+		<option value="cover">Cover</option>
 		</select>
 		
 	In progress or performance ready:
