@@ -16,17 +16,14 @@ $year = $_POST['Year'];
 $content = $_POST['content'];
 $key = $_POST['Key'];
 $notes = $_POST['notes'];
-$original = $_POST['original'];  // this is the drop down
-$ready = $_POST['prog'];
+//$original = $_POST['original'];  // this is the drop down
+//$ready = $_POST['prog'];
 //$guitar = $_POST['Guitar'];
 
+//$query = "INSERT INTO songs (title,year) VALUES ('{$title}','{$year}')";
 
-
-$query = "INSERT INTO songs (
-				'title', 'year', 'content', 'song_key', 'song_notes', 'original', 'in_progress', 'piano'
-			) VALUES (
-				'{$title}', '','{$year}', '','{$content}', '','{$key}', '','{$notes}', '','{$original}', '','{$ready}',
-			)";
+$query = "INSERT INTO songs ('title', 'year', 'content', 'song_key', 'song_notes', 'original', 'in_progress', 'instrument'
+			) VALUES ('{$title}','{$year}','{$content}','{$key}','{$notes}','{$original}','{$ready}',)";
 	$result = mysql_query($query,$connection);
 	if ($result) {
 		// Success!

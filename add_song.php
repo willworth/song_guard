@@ -28,7 +28,9 @@ Form data is passed to external php page add.php-->
 	<input type="text" name="Key" size="10">
 	</p>
 	
-	<p>
+<!--	<p>
+	
+	
 	Original or cover:
 	<select name="original" size="1">
 	    <option value="">-----</option>
@@ -46,6 +48,8 @@ Form data is passed to external php page add.php-->
 	<input type="checkbox" name="Piano" value="Piano"> Piano
 	<input type="checkbox" name="Other" value="Other"> Other
 	<br />
+
+-->
 	Chords/Lyrics:<br />
 	<textarea name="content" rows="10" cols="50">
 	</textarea>

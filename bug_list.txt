@@ -1,0 +1,26 @@
+Bug databases can be complicated or simple. A minimal useful bug database must include the following data for every bug:
+
+    complete steps to reproduce the bug
+    expected behavior
+    observed (buggy) behavior
+    who it's assigned to
+    whether it has been fixed or not 
+
+If the complexity of bug tracking software is the only thing stopping you from tracking your bugs, just make a simple 5 column table with these crucial fields and start using it.
+
+
+
+
+
+Top Ten Tips for Bug Tracking
+
+    A good tester will always try to reduce the repro steps to the minimal steps to reproduce; this is extremely helpful for the programmer who has to find the bug.
+    Remember that the only person who can close a bug is the person who opened it in the first place. Anyone can resolve it, but only the person who saw the bug can really be sure that what they saw is fixed.
+    There are many ways to resolve a bug. FogBUGZ allows you to resolve a bug as fixed, won't fix, postponed, not repro, duplicate, or by design.
+    Not Repro means that nobody could ever reproduce the bug. Programmers often use this when the bug report is missing the repro steps.
+    You'll want to keep careful track of versions. Every build of the software that you give to testers should have a build ID number so that the poor tester doesn't have to retest the bug on a version of the software where it wasn't even supposed to be fixed.
+    If you're a programmer, and you're having trouble getting testers to use the bug database, just don't accept bug reports by any other method. If your testers are used to sending you email with bug reports, just bounce the emails back to them with a brief message: "please put this in the bug database. I can't keep track of emails."
+    If you're a tester, and you're having trouble getting programmers to use the bug database, just don't tell them about bugs - put them in the database and let the database email them.
+    If you're a programmer, and only some of your colleagues use the bug database, just start assigning them bugs in the database. Eventually they'll get the hint.
+    If you're a manager, and nobody seems to be using the bug database that you installed at great expense, start assigning new features to people using bugs. A bug database is also a great "unimplemented feature" database, too.
+    Avoid the temptation to add new fields to the bug database. Every month or so, somebody will come up with a great idea for a new field to put in the database. You get all kinds of clever ideas, for example, keeping track of the file where the bug was found; keeping track of what % of the time the bug is reproducible; keeping track of how many times the bug occurred; keeping track of which exact versions of which DLLs were installed on the machine where the bug happened. It's very important not to give in to these ideas. If you do, your new bug entry screen will end up with a thousand fields that you need to supply, and nobody will want to input bug reports any more. For the bug database to work, everybody needs to use it, and if entering bugs "formally" is too much work, people will go around the bug database.
