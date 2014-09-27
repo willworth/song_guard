@@ -1,21 +1,24 @@
-<?php require_once("includes/connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>		
+<?php require_once("includes/connection.php");  ?>
+<?php include("includes/header.php");  ?>		
 <?php
-/*
-this file accepts the form data sent by new.php, and sends to SQL
-*/
-$name = $_POST['name'];
-//$artist = $_POST['Artist'];
-//$year = $_POST['Year'];
-$content = $_POST['content'];
-//$key = $_POST['Key'];
-$notes = $_POST['notes'];
-//$original = $_POST['original'];  // this is the drop down
-//$ready = $_POST['prog'];
-//$guitar = $_POST['Guitar'];
+function mysql_prep( $value ) {
+		$magic_quotes_active = get_magic_quotes_gpc();
+		$new_enough_php = function_exists( "mysql_real_escape_string" ); // i.e. PHP >= v4.3.0
+		if( $new_enough_php ) { // PHP v4.3.0 or higher
+			// undo any magic quote effects so mysql_real_escape_string can do the work
+			if( $magic_quotes_active ) { $value = stripslashes( $value ); }
+			$value = mysql_real_escape_string( $value );
+		} else { // before PHP v4.3.0
+			// if magic quotes aren't already on then add slashes manually
+			if( !$magic_quotes_active ) { $value = addslashes( $value ); }
+			// if magic quotes are active, then the slashes already exist
+		}
+		return $value;
 
-//$query = "INSERT INTO songs (title,year) VALUES ('{$title}','{$year}')";
+
+$name = mysql_prep($_POST['name']);
+$content = mysql_prep($_POST['content']);
+$notes = mysql_prep($_POST['notes']);
 
 $query = "INSERT INTO songs (
 				title, content, song_notes
@@ -25,26 +28,12 @@ $query = "INSERT INTO songs (
 	$result = mysql_query($query,$connection);
 	if ($result) {
 		// Success!
-		
+		echo "success";
     echo "<p>\"$name\" added to database.</p>";
 	} else {
 		// Display error message.
 		echo "<p>Subject creation failed.</p>";
 		echo "<p>" . mysql_error() . "</p>";
 	}
-
-print "We have successfully received $name<br />"; 
-//print "We have successfully received $artist<br />";
-//print "We have successfully received $year<br />";
-print "We have successfully received $content<br />";
-//print "We have successfully received $key<br />";
-print "We have successfully received $notes<br />";
-//print "We have successfully received $original<br />";
-//print "We have successfully received $ready<br />";
-//print "We have successfully received $guitar<br />";
-
-
-
-
-
-
+	}
+?>
