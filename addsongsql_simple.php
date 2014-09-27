@@ -1,0 +1,50 @@
+<?php require_once("includes/connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>		
+<?php
+/*
+this file accepts the form data sent by new.php, and sends to SQL
+*/
+$name = $_POST['name'];
+//$artist = $_POST['Artist'];
+//$year = $_POST['Year'];
+$content = $_POST['content'];
+//$key = $_POST['Key'];
+$notes = $_POST['notes'];
+//$original = $_POST['original'];  // this is the drop down
+//$ready = $_POST['prog'];
+//$guitar = $_POST['Guitar'];
+
+//$query = "INSERT INTO songs (title,year) VALUES ('{$title}','{$year}')";
+
+$query = "INSERT INTO songs (
+				title, content, song_notes
+			) VALUES (
+				'{$name}', '{$content}', '{$notes}'
+			)";
+	$result = mysql_query($query,$connection);
+	if ($result) {
+		// Success!
+		
+    echo "<p>\"$name\" added to database.</p>";
+	} else {
+		// Display error message.
+		echo "<p>Subject creation failed.</p>";
+		echo "<p>" . mysql_error() . "</p>";
+	}
+
+print "We have successfully received $name<br />"; 
+//print "We have successfully received $artist<br />";
+//print "We have successfully received $year<br />";
+print "We have successfully received $content<br />";
+//print "We have successfully received $key<br />";
+print "We have successfully received $notes<br />";
+//print "We have successfully received $original<br />";
+//print "We have successfully received $ready<br />";
+//print "We have successfully received $guitar<br />";
+
+
+
+
+
+

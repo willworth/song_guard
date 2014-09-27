@@ -3,32 +3,28 @@
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>		
 
-
-
 <!-- 
 This page contains the table to accept new entries.
 Form data is passed to external php page add.php-->
-
-
 
 	<div id= "intro"
 	<p>This is where we add songs to the database. We will associate the songs with the artist later. Only the song title and chord/lyric fields are required.</p>
 	</div>
 
 <!--  ####################BEGIN FORM#######################-->  
-	<form <!-- method="post" action="addsongsql.php" --> 
+	<form <!-- method="post" action="addsongsql_simple.php" --> 
 	<p>
 	Song Title:
-	<input type="text" name="Title" size="30">
+	<input type="text" name="name" size="30">
 <!-- 	Artist:
-	<input type="text" name="Artist" size="30"> -->
+	<input type="text" name="Artist" size="30"> 
 	Year:
-	<input type="text" name="Year" size="4">
+	<input type="number" name="Year" size="4">
 	Musical Key:
 	<input type="text" name="Key" size="10">
-	</p>
+	</p>-->
 	<p>
-		Chords/Lyrics:<br />
+	Chords/Lyrics:<br />
 	<textarea name="content" rows="10" cols="50">
 	</textarea>
 	<br />
@@ -59,20 +55,14 @@ Form data is passed to external php page add.php-->
 	<br />
 </p>
 -->
-
-	
 	<p>
 	<input type="submit" value="Submit Information"> 
 	<a href="index.php">Cancel</a>
 	
 <!--  ####################END FORM#######################-->
 </form>
-	 
-	
-	</body>
-
+	 	</body>
 </html>
-
 <?php require("includes/footer.php"); ?>
 
 
